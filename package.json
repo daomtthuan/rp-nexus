@@ -8,11 +8,11 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "nuxt-ts",
-    "build": "nuxt-ts build",
-    "start": "nuxt-ts start",
-    "generate": "nuxt-ts generate",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+    "dev": "nuxt-ts src",
+    "build": "nuxt-ts build src",
+    "start": "nuxt-ts start src",
+    "generate": "nuxt-ts generate src",
+    "deploy": "push-dir --dir=src/dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^2.0.0",
