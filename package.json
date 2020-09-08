@@ -2,20 +2,19 @@
   "name": "rp-nexus",
   "version": "1.0.0",
   "description": "Nexus Rental Partner Website",
-  "main": "nuxt.config.ts",
   "repository": "https://github.com/daomtthuan/rp-nexus.git",
   "author": "Daomtthuan <dao.mt.thuan@gmail.com>",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "nuxt-ts src",
-    "build": "nuxt-ts build src",
-    "start": "nuxt-ts start src",
-    "generate": "nuxt-ts generate src",
-    "deploy": "push-dir --dir=src/dist --branch=gh-pages --cleanup"
+    "dev": "nuxt-ts",
+    "build": "nuxt-ts generate",
+    "deploy": "push-dir --dir=./dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^2.0.0",
+    "@nuxtjs/pwa": "^3.0.2",
+    "normalize.css": "^8.0.1",
     "nuxt": "^2.14.4",
     "nuxt-property-decorator": "^2.7.2"
   },

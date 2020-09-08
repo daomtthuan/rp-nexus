@@ -1,5 +1,5 @@
 <template>
-  <nuxt />
+  <nuxt></nuxt>
 </template>
 
 <script lang="ts">
@@ -8,3 +8,7 @@
   @Component
   export default class DefaultLayout extends Vue {}
 </script>
+
+<style lang="scss">
+  @import '~/assets/styles';
+</style>

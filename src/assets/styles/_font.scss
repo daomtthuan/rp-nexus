@@ -1,0 +1,8 @@
+@import 'font-family';
+
+$font-sans-serif: 'Noto Sans JP', sans-serif;
+$font-serif: 'Noto Serif JP', serif;
+
+#__nuxt {
+  font-family: $font-sans-serif;
+}
