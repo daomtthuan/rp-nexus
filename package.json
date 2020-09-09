@@ -7,9 +7,9 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "nuxt-ts",
-    "build": "nuxt-ts generate",
-    "deploy": "push-dir --dir=./dist --branch=gh-pages --cleanup"
+    "dev": "clear && nuxt-ts",
+    "build": "clear && nuxt-ts generate",
+    "deploy": "clear && push-dir --dir=./dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^2.0.0",
@@ -21,6 +21,7 @@
   "devDependencies": {
     "@nuxt/types": "^2.14.4",
     "@nuxt/typescript-build": "^2.0.3",
+    "@nuxtjs/dotenv": "^1.4.1",
     "node-sass": "^4.14.1",
     "push-dir": "^0.4.1",
     "sass-loader": "^10.0.2"

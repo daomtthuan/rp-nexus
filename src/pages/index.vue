@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link to="/components">Go to components demo</nuxt-link>
+  <main></main>
 </template>
 
 <script lang="ts">
