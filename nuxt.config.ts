@@ -65,8 +65,10 @@ export default {
     path: '~/../',
   },
   build: {
+    analyze: false,
     babel: {
       presets: () => [['@nuxt/babel-preset-app', { loose: true }]],
+      compact: true,
     },
   },
 };
