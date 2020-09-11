@@ -35,7 +35,7 @@ export default {
     titleTemplate: `${process.env.app_name} - %s`,
     noscript: [{ innerHTML: 'This website requires JavaScript. （このWebサイトにはJavaScriptが必要です。）' }],
   },
-  modules: ['@nuxtjs/pwa'],
+  modules: ['@nuxtjs/pwa', 'bootstrap-vue/nuxt'],
   pwa: {
     meta: {
       viewport: process.env.app_viewport,

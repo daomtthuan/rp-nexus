@@ -8,6 +8,8 @@ $white: #fafafa;
 $white-80: #fafafacc;
 $white-50: #fafafa80;
 $white-30: #fafafa4d;
+$white-1: #fafafa03;
+$white-05: #fafafa01;
 $white-0: #fafafa00;
 
 $yellow: #e6ecac;
@@ -16,15 +18,10 @@ $yellow-50: #e6ecac80;
 $yellow-30: #e6ecac4d;
 $yellow-0: #e5ecac00;
 
-html,
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-button {
-  color: $white;
+body {
   background-color: $black;
+}
+
+* {
+  color: $white;
 }

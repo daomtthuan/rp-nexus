@@ -26,6 +26,8 @@
     padding: 1rem 1.5rem;
     overflow: hidden;
     position: relative;
+    background-color: transparent;
+    color: $white;
     transition: background 1.5s $cubic-bezier, border 1s $cubic-bezier, color 0.6s $cubic-bezier;
 
     .mask {

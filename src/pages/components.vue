@@ -5,20 +5,26 @@
     <section>
       <h3>Button</h3>
 
-      <app-button-yellow>
+      <app-button>
         ボタン
-      </app-button-yellow>
+      </app-button>
       <br />
       <br />
-      <app-button-yellow>
+      <app-button>
         長いボタン 長いボタン 長いボタン 長いボタン
-      </app-button-yellow>
+      </app-button>
     </section>
 
     <section>
       <h3>Background Animation</h3>
 
-      <app-background-yellow :count="20"></app-background-yellow>
+      <app-meteorite />
+    </section>
+
+    <section>
+      <h3>Firefly Animation</h3>
+
+      <app-firefly />
     </section>
   </main>
 </template>

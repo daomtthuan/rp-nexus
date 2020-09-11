@@ -1,10 +1,9 @@
 <template>
-  <div class="background">
-    <div class="wrapper">
-      <div v-for="index in count" :key="index" class="element"></div>
+  <div class="meteorite">
+    <div class="elements-wrapper">
+      <div v-for="index in 10" :key="index" class="element-white"></div>
+      <div v-for="index in 11" :key="index" class="element-yellow"></div>
     </div>
-
-    <slot></slot>
   </div>
 </template>
 
@@ -12,16 +11,16 @@
   import { Component, Prop, Vue } from 'nuxt-property-decorator';
 
   @Component
-  export default class AppBackground extends Vue {
+  export default class AppMeteorite extends Vue {
     @Prop(Number) count!: Number;
   }
 </script>
 
 <style lang="scss" scoped>
-  .background {
+  .meteorite {
     @import '~/assets/styles/color';
 
-    $time: 3.5s;
+    $time: 3s;
     $rotate: 55deg;
 
     @keyframes blurred {
@@ -48,31 +47,59 @@
       }
     }
 
-    width: 100vh;
-    height: 100vh;
+    height: 100%;
+    width: 50vw;
     overflow: hidden;
     display: flex;
-    justify-content: center;
-    align-items: center;
     position: absolute;
-    top: -20%;
-    left: 50%;
+    right: 0;
+    top: 0;
 
-    .wrapper {
+    .elements-wrapper {
       position: relative;
-      width: 100%;
+      width: calc(100vw - 50%);
       height: 50%;
       transform: rotateZ($rotate);
+      top: -10vh;
+      right: -8vw;
 
-      .element {
+      .element-white {
         position: absolute;
-        height: 0.125rem;
+        height: 0.1rem;
         background: linear-gradient(-$rotate, $white-50, $white-0);
-        filter: drop-shadow(0 0 0.5rem $white-50);
+        filter: drop-shadow(0 0 5rem $white-50);
         animation: blurred $time ease-in-out infinite, fall-down $time ease-in-out infinite;
 
         &::after {
-          @extend .element::before;
+          @extend .element-white::before;
+          transform: translateX(50%) rotateZ(-$rotate);
+        }
+
+        @for $i from 1 through 20 {
+          &:nth-child(#{$i}) {
+            $delay: random(9999) + 10ms;
+            top: calc(50% - #{random(400) - 200px});
+            left: calc(50% - #{random(300) + 0px});
+            animation-delay: $delay;
+            opacity: random(50) / 100 + 0.5;
+
+            &::before,
+            &::after {
+              animation-delay: $delay;
+            }
+          }
+        }
+      }
+
+      .element-yellow {
+        position: absolute;
+        height: 0.15rem;
+        background: linear-gradient(-$rotate, $yellow-50, $yellow-0);
+        filter: drop-shadow(0 0 5rem $yellow-50);
+        animation: blurred $time ease-in-out infinite, fall-down $time ease-in-out infinite;
+
+        &::after {
+          @extend .element-yellow::before;
           transform: translateX(50%) rotateZ(-$rotate);
         }
 
