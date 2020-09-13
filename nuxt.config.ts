@@ -8,11 +8,11 @@ export default {
     host: '127.0.0.1',
     port: 80,
   },
-  router: { base: process.env.app_baseUrl },
+  router: { base: process.env.app_base },
 
   // Project
   srcDir: 'src/',
-  components: [{ path: '~/components/app', prefix: 'app' }],
+  components: true,
   head: {
     meta: [
       { charset: 'utf-8' },
@@ -26,10 +26,10 @@ export default {
       { name: 'twitter:title', content: process.env.app_name },
       { name: 'twitter:description', content: process.env.app_description },
       { name: 'og:locale', content: 'ja_JP' },
-      // { name: 'twitter:image', content:  },
-      //og:image:width
-      //og:image:height
-      //og:image:secure_url
+      { name: 'twitter:image', content: `${process.env.app_base}/images/index/hand.png` },
+      { name: 'og:image:width', content: '544' },
+      { name: 'og:image:height', content: '362' },
+      { name: 'og:image:secure_url', content: `${process.env.app_base}/images/index/hand.png` },
     ],
     title: process.env.app_name,
     titleTemplate: `${process.env.app_name} - %s`,
@@ -44,8 +44,8 @@ export default {
       description: process.env.app_description,
       theme_color: process.env.app_color,
       lang: process.env.app_language,
-      ogHost: 'http://rp-nexus.jimdo.com/',
-      //ogImage
+      ogHost: process.env.app_base,
+      ogImage: '/images/index/hand.png',
       twitterCard: 'summary_large_image',
       nativeUI: true,
     },
