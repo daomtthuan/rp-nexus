@@ -31,7 +31,7 @@
     transition: background 1.5s $cubic-bezier, border 1s $cubic-bezier, color 0.6s $cubic-bezier;
 
     .mask {
-      background-color: $white-50;
+      background-color: $white-05;
       height: 100vh;
       position: absolute;
       transform: translate3d(-120%, -50px, 0) rotate3d(0, 0, 1, 25deg);
@@ -47,9 +47,9 @@
     }
 
     &:hover {
-      background-color: $white-50;
+      background-color: $white-05;
       border-color: $white;
-      box-shadow: 0 0 0.25rem $white-80;
+      box-shadow: 0 0 0.25rem $white-8;
       transition: background 0.25s;
 
       .mask {
@@ -59,9 +59,9 @@
     }
 
     &:active {
-      background-color: $white-80;
+      background-color: $white-8;
       color: $black;
-      box-shadow: 0 0 0.5rem $white-80;
+      box-shadow: 0 0 0.5rem $white-8;
     }
   }
 </style>

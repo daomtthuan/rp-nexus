@@ -5,15 +5,14 @@
     <section id="home">
       <b-container fluid no-gutters>
         <b-row>
-          <b-col md="6" lg="8" class="brand">
-            <div class="brand-content text-center">
-              <h1 class="pt-5">NEXUS</h1>
-              <h2>RENTAL PARTNER</h2>
+          <b-col lg="8" xl="6" class="brand">
+            <div class="brand-content">
+              <app-logo />
             </div>
             <div class="brand-background-1"></div>
             <div class="brand-background-2"></div>
           </b-col>
-          <b-col md="6" lg="4"> </b-col>
+          <b-col lg="4" xl="6"></b-col>
         </b-row>
       </b-container>
     </section>
@@ -36,7 +35,7 @@
     @import '~/assets/styles/color';
 
     overflow: hidden;
-    background: $white-1;
+    background: $white-01;
     z-index: -1;
     position: relative;
 
@@ -44,9 +43,10 @@
       min-height: 100vh;
 
       .brand-content {
-        margin-top: 12rem;
+        margin: 12rem auto;
         z-index: 2;
         position: relative;
+        width: 50%;
       }
 
       .brand-background-1 {

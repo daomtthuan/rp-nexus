@@ -1,8 +1,8 @@
 <template>
   <div class="meteorite">
     <div class="elements-wrapper">
-      <div v-for="index in 10" :key="index" class="element-white"></div>
-      <div v-for="index in 11" :key="index" class="element-yellow"></div>
+      <div v-for="index in 5" :key="index" class="element-white"></div>
+      <div v-for="index in 5" :key="index" class="element-yellow"></div>
     </div>
   </div>
 </template>
@@ -20,7 +20,7 @@
   .meteorite {
     @import '~/assets/styles/color';
 
-    $time: 3s;
+    $time: 2.5s;
     $rotate: 55deg;
 
     @keyframes blurred {
@@ -66,8 +66,8 @@
       .element-white {
         position: absolute;
         height: 0.1rem;
-        background: linear-gradient(-$rotate, $white-50, $white-0);
-        filter: drop-shadow(0 0 5rem $white-50);
+        background: linear-gradient(-$rotate, $white-5, $transparent);
+        filter: drop-shadow(0 0 5rem $white-5);
         animation: blurred $time ease-in-out infinite, fall-down $time ease-in-out infinite;
 
         &::after {
@@ -94,8 +94,8 @@
       .element-yellow {
         position: absolute;
         height: 0.15rem;
-        background: linear-gradient(-$rotate, $yellow-50, $yellow-0);
-        filter: drop-shadow(0 0 5rem $yellow-50);
+        background: linear-gradient(-$rotate, $yellow-5, $transparent);
+        filter: drop-shadow(0 0 5rem $yellow-5);
         animation: blurred $time ease-in-out infinite, fall-down $time ease-in-out infinite;
 
         &::after {

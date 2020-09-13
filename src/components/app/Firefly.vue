@@ -1,6 +1,6 @@
 <template>
   <div class="firefly">
-    <div v-for="index in 100" :key="index" class="element"></div>
+    <div v-for="index in 15" :key="index" class="element"></div>
   </div>
 </template>
 
@@ -15,7 +15,7 @@
   .firefly {
     @import '~/assets/styles/color';
 
-    $quantity: 100;
+    $quantity: 10;
 
     .element {
       position: fixed;
@@ -38,13 +38,13 @@
       }
 
       &::before {
-        background: $white-1;
+        background: $white-01;
         opacity: 0.3;
         animation: drift ease alternate infinite;
       }
 
       &::after {
-        background: $white-80;
+        background: $white-8;
         opacity: 0;
         box-shadow: 0 0 0vw 0vw $yellow;
         animation: drift ease alternate infinite, flash ease infinite;
