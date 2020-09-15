@@ -1,5 +1,6 @@
 <template>
   <main>
+    <page-index-navbar />
     <page-index-home />
   </main>
 </template>

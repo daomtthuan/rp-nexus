@@ -1,18 +1,42 @@
 <template>
   <section id="home">
-    <app-firefly />
     <b-container fluid no-gutters>
-      <b-row>
-        <b-col lg="8" xl="6" class="brand">
-          <app-logo class="brand-content" />
-          <div class="brand-background-1"></div>
-          <div class="brand-background-2"></div>
+      <b-row class="row-1">
+        <b-col lg="8" xl="6">
+          <div class="background-1"></div>
+          <div class="background-2"></div>
+          <div class="background-3"></div>
+          <app-logo class="brand" />
         </b-col>
-        <b-col lg="4" xl="6">
-          <app-meteorite />
+      </b-row>
+      <b-row class="row-2">
+        <b-col lg="8" xl="6" class="about text-center">
+          <h3>私たち<span class="text-yellow">NEXUS</span>は</h3>
+          <h5>
+            目まぐるしく変わっていく<br />
+            現場状況下でお客様、<br />
+            協力会社様と連携を取り
+          </h5>
+          <h4 class="text-yellow">
+            臨機応変<br />
+            ファスト レスポンス
+          </h4>
+          <h5>
+            を常に心掛け、<br />
+            お客様にとって
+          </h5>
+          <h3 class="text-yellow">
+            RENTAL PARTNER
+          </h3>
+          <h5>
+            であり続ける為に日々、<br />
+            走り続けています。
+          </h5>
         </b-col>
       </b-row>
     </b-container>
+    <app-meteorite />
+    <app-firefly />
   </section>
 </template>
 
@@ -28,36 +52,49 @@
     @import '~/assets/styles/color';
 
     overflow: hidden;
-    background: $white-01;
-    z-index: -1;
-    position: relative;
+    min-height: 100vh;
 
-    .brand {
-      min-height: 100vh;
-
-      .brand-content {
-        margin: 12rem auto;
-        z-index: 2;
+    .row-1 {
+      .brand {
         position: relative;
+        margin-top: calc((100vh -100%) / 6);
       }
 
-      .brand-background-1 {
+      .background-1 {
+        background-image: linear-gradient($black, $black-8), url($base + '/images/index/hand.png');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        width: calc(200vw / 3);
+        position: absolute;
+        top: 0;
+        left: calc(100vw / 3);
+        z-index: 0;
+      }
+
+      .background-2 {
         background-color: $black;
         height: 100vh;
         width: calc(100vw / 3);
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 1;
+        z-index: 0;
       }
 
-      .brand-background-2 {
+      .background-3 {
         border-top: 100vh solid $black;
         border-right: calc(100vw / 3) solid transparent;
         position: absolute;
         top: 0;
         left: calc(100vw / 3);
-        z-index: 1;
+        z-index: 0;
+      }
+    }
+
+    .row-2 {
+      & > * {
+        margin-top: calc((100vh -100%) / 6);
       }
     }
   }

@@ -1,8 +1,8 @@
 <template>
   <div class="meteorite">
-    <div class="elements-wrapper">
-      <div v-for="index in 5" :key="index" class="element-white"></div>
-      <div v-for="index in 5" :key="index" class="element-yellow"></div>
+    <div class="wrapper">
+      <div v-for="index in 10" :key="index" class="element-white"></div>
+      <div v-for="index in 10" :key="index" class="element-yellow"></div>
     </div>
   </div>
 </template>
@@ -55,7 +55,7 @@
     right: 0;
     top: 0;
 
-    .elements-wrapper {
+    .wrapper {
       position: relative;
       width: calc(100vw - 50%);
       height: 50%;

@@ -1,6 +1,6 @@
 <template>
   <div class="firefly">
-    <div v-for="index in 15" :key="index" class="element"></div>
+    <div v-for="index in 50" :key="index" class="element"></div>
   </div>
 </template>
 
@@ -15,7 +15,7 @@
   .firefly {
     @import '~/assets/styles/color';
 
-    $quantity: 10;
+    $quantity: 50;
 
     .element {
       position: fixed;
