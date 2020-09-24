@@ -1,19 +1,17 @@
 <template>
   <div class="meteorite">
     <div class="wrapper">
-      <div v-for="index in 10" :key="index" class="element-white"></div>
-      <div v-for="index in 10" :key="index" class="element-yellow"></div>
+      <div v-for="index in 5" :key="index" class="element-white"></div>
+      <div v-for="index in 5" :key="index" class="element-yellow"></div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-  import { Component, Prop, Vue } from 'nuxt-property-decorator';
+  import { Component, Vue } from 'nuxt-property-decorator';
 
   @Component
-  export default class AppMeteorite extends Vue {
-    @Prop(Number) count!: Number;
-  }
+  export default class AppMeteorite extends Vue {}
 </script>
 
 <style lang="scss" scoped>

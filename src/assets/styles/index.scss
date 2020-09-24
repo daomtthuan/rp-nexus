@@ -1,3 +1,13 @@
 @import 'color';
 @import 'font';
 @import 'layout';
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}

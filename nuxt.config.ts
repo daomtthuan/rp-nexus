@@ -2,6 +2,47 @@ import Dotenv from 'dotenv';
 
 Dotenv.config();
 
+const pwa = {
+  icon: {
+    sizes: [64, 120, 144, 152, 192, 384, 512],
+  },
+  meta: {
+    viewport: process.env.VIEWPORT,
+    name: process.env.NAME,
+    author: process.env.AUTHOR,
+    description: process.env.DESCRIPTION,
+    theme_color: process.env.COLOR,
+    lang: process.env.LANGUAGE,
+    ogHost: process.env.BASE,
+    ogImage: '/images/index/hand.png',
+    twitterCard: 'summary_large_image',
+    nativeUI: true,
+  },
+  manifest: {
+    name: process.env.NAME,
+    description: process.env.DESCRIPTION,
+    lang: process.env.LANGUAGE,
+    background_color: process.env.COLOR,
+    theme_color: process.env.COLOR,
+  },
+};
+
+const bootstrapVue = {};
+
+const vueScrollto = {
+  container: 'body',
+  duration: 500,
+  easing: 'ease',
+  offset: 0,
+  force: true,
+  cancelable: true,
+  onStart: false,
+  onDone: false,
+  onCancel: false,
+  x: false,
+  y: true,
+};
+
 export default {
   // Server
   server: {
@@ -13,6 +54,7 @@ export default {
   // Project
   srcDir: 'src/',
   components: true,
+  loading: '~/components/app/AppLoading.vue',
   head: {
     meta: [
       { charset: 'utf-8' },
@@ -35,31 +77,12 @@ export default {
     titleTemplate: `${process.env.NAME} - %s`,
     noscript: [{ innerHTML: 'This website requires JavaScript. （このWebサイトにはJavaScriptが必要です。）' }],
   },
-  modules: ['@nuxtjs/pwa', 'bootstrap-vue/nuxt'],
-  pwa: {
-    icon: {
-      sizes: [64, 120, 144, 152, 192, 384, 512],
-    },
-    meta: {
-      viewport: process.env.VIEWPORT,
-      name: process.env.NAME,
-      author: process.env.AUTHOR,
-      description: process.env.DESCRIPTION,
-      theme_color: process.env.COLOR,
-      lang: process.env.LANGUAGE,
-      ogHost: process.env.BASE,
-      ogImage: '/images/index/hand.png',
-      twitterCard: 'summary_large_image',
-      nativeUI: true,
-    },
-    manifest: {
-      name: process.env.NAME,
-      description: process.env.DESCRIPTION,
-      lang: process.env.LANGUAGE,
-      background_color: process.env.COLOR,
-      theme_color: process.env.COLOR,
-    },
-  },
+  plugins: ['~/plugins/scroll'],
+  modules: [
+    ['@nuxtjs/pwa', pwa],
+    ['bootstrap-vue/nuxt', bootstrapVue],
+    ['vue-scrollto/nuxt', vueScrollto],
+  ],
 
   // Build
   target: 'static',

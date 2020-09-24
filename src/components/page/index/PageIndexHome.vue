@@ -3,7 +3,7 @@
     <b-container fluid no-gutters>
       <b-row class="row">
         <b-col lg="8" xl="6">
-          <div class="wrapper">
+          <div class="wrapper" data-aos="fade-up">
             <div class="w-100">
               <app-logo class="brand" />
               <div class="text-center">
@@ -37,7 +37,6 @@
         </b-col>
       </b-row>
     </b-container>
-    <app-meteorite />
     <app-firefly />
   </section>
 </template>
@@ -73,8 +72,12 @@
             max-width: calc(100vw / 2);
           }
 
-          @media (min-width: 2560px) {
+          @media (min-width: 2000px) {
             max-width: calc(100vw / 3);
+          }
+
+          @media (min-width: 2560px) {
+            max-width: calc(100vw / 4);
           }
         }
       }

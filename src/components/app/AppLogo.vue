@@ -78,50 +78,12 @@
         fill: $white;
         stroke: $white;
         stroke-width: 1pt;
-        animation: draw-path 5s linear infinite alternate;
-        stroke-dasharray: 1200 200;
       }
 
       .line {
         fill: $white;
         stroke: $white;
         stroke-width: 1pt;
-        animation: draw-line 5s linear infinite alternate;
-        stroke-dasharray: 1200 200;
-      }
-
-      @keyframes draw-path {
-        0% {
-          stroke-width: 1pt;
-          stroke-dashoffset: 1200;
-          fill-opacity: 0;
-        }
-
-        50% {
-          fill-opacity: 0;
-        }
-
-        100% {
-          stroke-width: 0pt;
-          stroke-dashoffset: 0;
-          fill-opacity: 1;
-        }
-      }
-
-      @keyframes draw-line {
-        0% {
-          stroke-width: 1pt;
-          stroke-dashoffset: 1200;
-        }
-
-        50% {
-          stroke-width: 0.5pt;
-        }
-
-        100% {
-          stroke-width: 1pt;
-          stroke-dashoffset: 0;
-        }
       }
     }
   }
