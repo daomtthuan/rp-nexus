@@ -1,0 +1,54 @@
+{
+  "name": "NEXUS RENTAL PARTNER",
+  "short_name": "rp-nexus",
+  "description": "建機　建設機械　レンタル　ネクサス　めくり隊　解体　アタッチメント　出張修理　nexus NEXUS 重機　SK30 SK17 SK45 CAT ｺﾍﾞﾙｺ　KOBELCO　303　017　308",
+  "icons": [
+    {
+      "src": "/rp-nexus/_nuxt/icons/icon_64x64.87d03b.png",
+      "sizes": "64x64",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/rp-nexus/_nuxt/icons/icon_120x120.87d03b.png",
+      "sizes": "120x120",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/rp-nexus/_nuxt/icons/icon_144x144.87d03b.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/rp-nexus/_nuxt/icons/icon_152x152.87d03b.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/rp-nexus/_nuxt/icons/icon_192x192.87d03b.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/rp-nexus/_nuxt/icons/icon_384x384.87d03b.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/rp-nexus/_nuxt/icons/icon_512x512.87d03b.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/rp-nexus/?standalone=true",
+  "display": "standalone",
+  "background_color": "#171414",
+  "theme_color": "#171414",
+  "lang": "ja"
+}
