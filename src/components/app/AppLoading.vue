@@ -1,14 +1,15 @@
 <template>
-  <section id="loading" v-if="$store.state.loading.isLoading">
-    <div class="d-flex align-items-center h-100 w-100">
-      <div class="mx-auto wrapper">
-        <app-animation-logo />
-        <!-- <app-meteorite /> -->
+  <transition name="page">
+    <section id="loading" v-if="$store.state.loading.isLoading">
+      <div class="d-flex align-items-center h-100 w-100">
+        <div class="mx-auto wrapper">
+          <app-animation-logo />
+        </div>
       </div>
-    </div>
-    <div class="mask2"></div>
-    <div class="mask1"></div>
-  </section>
+      <div class="mask2"></div>
+      <div class="mask1"></div>
+    </section>
+  </transition>
 </template>
 
 <script lang="ts">
@@ -22,7 +23,7 @@
 
     public mounted() {
       this.$nextTick(() => {
-        new Promise((handler: TimerHandler) => setTimeout(handler, 5000)).then(() => {
+        new Promise((handler: TimerHandler) => setTimeout(handler, 4500)).then(() => {
           this.$store.commit('loading/setLoading', false);
         });
       });
@@ -41,7 +42,6 @@
     top: 0;
     right: 0;
     bottom: 0;
-    z-index: 999;
 
     .wrapper {
       width: calc(100vw / 3);
@@ -76,12 +76,12 @@
 
     .mask1 {
       background: $white-8;
-      animation-delay: 4s;
+      animation-delay: 3.5s;
     }
 
     .mask2 {
       background: $yellow-5;
-      animation-delay: 4.2s;
+      animation-delay: 3.8s;
     }
   }
 </style>

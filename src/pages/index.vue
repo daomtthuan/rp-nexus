@@ -1,9 +1,14 @@
 <template>
-  <main v-scroll="onScroll" v-if="!$store.state.loading.isLoading">
-    <page-index-navbar :scroll="scroll" />
-    <page-index-home />
-    <page-index-product />
-    <page-index-company />
+  <main>
+    <app-meteorite />
+    <transition name="page">
+      <section v-if="!$store.state.loading.isLoading" v-scroll="onScroll">
+        <page-index-navbar :scroll="scroll" />
+        <page-index-home />
+        <page-index-product />
+        <page-index-company />
+      </section>
+    </transition>
   </main>
 </template>
 
@@ -21,7 +26,7 @@
     }
 
     public mounted() {
-      aos.init();
+      // aos.init();
     }
 
     public onScroll(event: Event, element: Element) {
@@ -30,6 +35,7 @@
   }
 </script>
 
-<style lang="scss" scoped>
-  @import 'aos/dist/aos.css';
+<style lang="scss">
+  //   @import 'aos/dist/aos.css';
+  //
 </style>

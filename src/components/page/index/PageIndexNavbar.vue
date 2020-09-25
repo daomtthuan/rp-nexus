@@ -74,6 +74,12 @@
       } else if ((<HTMLLIElement>document.querySelector('#contact')).offsetTop <= scrollValue) {
         (<HTMLElement>this.$refs['contact']).classList.add('active');
       }
+
+      if (scrollValue >= (<HTMLElement>this.$el).offsetHeight) {
+        this.$el.classList.add('bg-black');
+      } else {
+        this.$el.classList.remove('bg-black');
+      }
     }
   }
 </script>

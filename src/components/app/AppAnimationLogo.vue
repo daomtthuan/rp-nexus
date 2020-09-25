@@ -74,18 +74,18 @@
       width: calc(2 / 3 * 100%);
       height: auto;
       margin: auto;
-      animation: show 5s linear forwards;
+      animation: show 4.5s linear forwards;
 
       @keyframes show {
         0% {
           opacity: 0;
         }
 
-        20% {
+        25% {
           opacity: 1;
         }
 
-        80% {
+        75% {
           opacity: 1;
         }
 
@@ -101,19 +101,16 @@
         stroke-dashoffset: 0;
         fill-opacity: 1;
         stroke-dasharray: 1200 1000;
-        animation-delay: 1s;
       }
 
       .line {
         stroke-width: 1pt;
         animation: line 3s linear forwards;
-        animation-delay: 1s;
       }
 
       .draw {
         stroke-width: 0pt;
         animation: draw 3s linear forwards;
-        animation-delay: 1s;
       }
 
       @keyframes draw {
