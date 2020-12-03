@@ -44,7 +44,15 @@
     bottom: 0;
 
     .wrapper {
-      width: calc(100vw / 3);
+      width: calc(100vw / 2);
+
+      @media (min-width: 768px) {
+        width: calc(200vw / 3);
+      }
+
+      @media (min-width: 992px) {
+        width: calc(100vw / 3);
+      }
     }
 
     .mask1,

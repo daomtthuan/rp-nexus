@@ -65,13 +65,11 @@
   .logo {
     @import '~/assets/styles/color';
 
-    width: 100%;
-    height: auto;
-
     .viewbox {
       display: block;
       opacity: 0;
-      width: calc(2 / 3 * 100%);
+      width: 100%;
+
       height: auto;
       margin: auto;
       animation: show 4.5s linear forwards;
